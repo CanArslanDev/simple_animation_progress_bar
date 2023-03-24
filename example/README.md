@@ -2,15 +2,57 @@
 
 Demonstrates how to use the simple_animation_progress_bar plugin.
 
-## Getting Started
+## Getting started
 
-This project is a starting point for a Flutter application.
+You should ensure that you add the router as a dependency in your flutter project.
+```yaml
+dependencies:
+ simple_animation_progress_bar: "^1.1.0"
+```
+y
+You should then run `flutter packages upgrade` or update your packages in IntelliJ.
 
-A few resources to get you started if this is your first Flutter project:
+## Example Project
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+There is a example project in the `example` folder. Check it out. Otherwise, keep reading to get up and running.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Usage
+
+Need to include the import the package to the dart file where it will be used, use the below command,
+
+```dart
+import 'package:simple_animation_progress_bar/simple_animation_progress_bar.dart';
+```
+
+Basic Widget usage with Linear Progress Bar
+```dart
+SimpleAnimationProgressBar(
+    height: 30,
+    width: 300,
+    backgroundColor: Colors.grey.shade800,
+    foregrondColor: Colors.purple,
+    ratio: 0.5,
+    direction: Axis.horizontal,
+    curve: Curves.fastLinearToSlowEaseIn,
+    duration: const Duration(seconds: 3),
+    borderRadius: BorderRadius.circular(10),
+)
+```
+
+
+Gradient Widget usage with Linear Progress Bar
+```dart
+SimpleAnimationProgressBar(
+    height: 30,
+    width: 300,
+    backgroundColor: Colors.grey.shade800,
+    foregrondColor: Colors.purple,
+    ratio: 0.5,
+    direction: Axis.horizontal,
+    curve: Curves.fastLinearToSlowEaseIn,
+    duration: const Duration(seconds: 3),
+    borderRadius: BorderRadius.circular(10),
+    gradientColor: const LinearGradient(
+    colors: [Colors.pink, Colors.purple]),
+)
+```
