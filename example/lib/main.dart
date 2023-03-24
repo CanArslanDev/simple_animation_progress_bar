@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-import 'package:flutter/services.dart';
 import 'package:simple_animation_progress_bar/simple_animation_progress_bar.dart';
 
 void main() {
@@ -129,21 +128,24 @@ class _MyAppState extends State<MyApp> {
                   begin: Alignment.bottomCenter,
                   end: Alignment.topCenter),
             ),
-            SimpleAnimationProgressBar(
-              height: 130,
-              width: 30,
-              backgroundColor: Colors.grey.shade800,
-              foregrondColor: Colors.purple,
-              ratio: ratio,
-              direction: Axis.vertical,
-              curve: Curves.fastLinearToSlowEaseIn,
-              duration: const Duration(seconds: 3),
-              borderRadius: BorderRadius.circular(10),
-              gradientColor: const LinearGradient(
-                  colors: [Colors.pink, Colors.purple],
-                  begin: Alignment.bottomCenter,
-                  end: Alignment.topCenter),
-              reverseAlignment: true,
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: SimpleAnimationProgressBar(
+                height: 130,
+                width: 30,
+                backgroundColor: Colors.grey.shade800,
+                foregrondColor: Colors.purple,
+                ratio: ratio,
+                direction: Axis.vertical,
+                curve: Curves.fastLinearToSlowEaseIn,
+                duration: const Duration(seconds: 3),
+                borderRadius: BorderRadius.circular(10),
+                gradientColor: const LinearGradient(
+                    colors: [Colors.pink, Colors.purple],
+                    begin: Alignment.bottomCenter,
+                    end: Alignment.topCenter),
+                reverseAlignment: true,
+              ),
             ),
           ],
         ),
