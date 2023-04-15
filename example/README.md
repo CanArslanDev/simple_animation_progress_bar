@@ -7,7 +7,7 @@ Demonstrates how to use the simple_animation_progress_bar plugin.
 You should ensure that you add the router as a dependency in your flutter project.
 ```yaml
 dependencies:
- simple_animation_progress_bar: "^1.1.0"
+ simple_animation_progress_bar: "^1.3.0"
 ```
 y
 You should then run `flutter packages upgrade` or update your packages in IntelliJ.
@@ -36,6 +36,17 @@ SimpleAnimationProgressBar(
     curve: Curves.fastLinearToSlowEaseIn,
     duration: const Duration(seconds: 3),
     borderRadius: BorderRadius.circular(10),
+    boxShadow: [
+      BoxShadow(
+        color: Colors.pink,
+        offset: const Offset(
+          5.0,
+          5.0,
+        ),
+        blurRadius: 10.0,
+        spreadRadius: 2.0,
+      ),
+      ],
 )
 ```
 
@@ -54,5 +65,16 @@ SimpleAnimationProgressBar(
     borderRadius: BorderRadius.circular(10),
     gradientColor: const LinearGradient(
     colors: [Colors.pink, Colors.purple]),
+    boxShadow: [
+      BoxShadow(
+        color: Colors.pink,
+        offset: const Offset(
+          5.0,
+          5.0,
+        ),
+        blurRadius: 10.0,
+        spreadRadius: 2.0,
+      ),
+      ],
 )
 ```
