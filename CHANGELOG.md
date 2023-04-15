@@ -6,3 +6,8 @@
 
 # 1.2.0
 - Fixed code errors and some optimization issues.
+
+# 1.3.0
+- Fixed code errors and some optimization issues.
+- Fixed Starting Timer.
+- Added Shadow Box.
