@@ -36,6 +36,17 @@ SimpleAnimationProgressBar(
     curve: Curves.fastLinearToSlowEaseIn,
     duration: const Duration(seconds: 3),
     borderRadius: BorderRadius.circular(10),
+    boxShadow: [
+      BoxShadow(
+        color: Colors.pink,
+        offset: const Offset(
+          5.0,
+          5.0,
+        ),
+        blurRadius: 10.0,
+        spreadRadius: 2.0,
+      ),
+      ],
 )
 ```
 
@@ -54,5 +65,16 @@ SimpleAnimationProgressBar(
     borderRadius: BorderRadius.circular(10),
     gradientColor: const LinearGradient(
     colors: [Colors.pink, Colors.purple]),
+    boxShadow: [
+      BoxShadow(
+        color: Colors.pink,
+        offset: const Offset(
+          5.0,
+          5.0,
+        ),
+        blurRadius: 10.0,
+        spreadRadius: 2.0,
+      ),
+      ],
 )
 ```

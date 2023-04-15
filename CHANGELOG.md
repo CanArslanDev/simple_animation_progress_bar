@@ -6,3 +6,12 @@
 
 # 1.2.0
 - Fixed code errors and some optimization issues.
+
+# 1.3.0
+- Fixed code errors and some optimization issues.
+- Fixed Starting Timer.
+- Added Shadow Box.
+
+# 1.4.0
+- Fixed Support Platforms
+- Fixed settings.gradle error
