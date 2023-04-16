@@ -15,3 +15,6 @@
 # 1.4.0
 - Fixed Support Platforms
 - Fixed settings.gradle error
+
+# 1.5.0
+- Some bugs fixed.
