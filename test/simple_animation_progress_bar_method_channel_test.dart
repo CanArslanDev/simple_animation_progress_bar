@@ -3,7 +3,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:simple_animation_progress_bar/simple_animation_progress_bar_method_channel.dart';
 
 void main() {
-  MethodChannelSimpleAnimationProgressBar platform = MethodChannelSimpleAnimationProgressBar();
+  MethodChannelSimpleAnimationProgressBar platform =
+      MethodChannelSimpleAnimationProgressBar();
   const MethodChannel channel = MethodChannel('simple_animation_progress_bar');
 
   TestWidgetsFlutterBinding.ensureInitialized();

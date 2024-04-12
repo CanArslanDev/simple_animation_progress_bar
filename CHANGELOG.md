@@ -21,3 +21,7 @@
 
 # 1.6.0
 - Fixed bugs on different platforms.
+
+# 1.7.0
+- Fixed ```Namespace not specified``` error.
+- Fixed sdk errors.
