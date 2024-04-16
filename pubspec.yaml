@@ -34,10 +34,10 @@ flutter:
   # adding or updating assets for this project.
   plugin:
     platforms:
+    mainClass: SimpleAnimationProgressBarPlugin
       android:
         package: com.canarslandev.simple_animation_progress_bar
         pluginClass: SimpleAnimationProgressBarPlugin
-        androidPackage: com.canarslandev.simple_animation_progress_bar
       ios:
         pluginClass: SimpleAnimationProgressBarPlugin
       linux:
