@@ -29,3 +29,6 @@
 # 1.8.0
 - Fixed ```:simple_animation_progress_bar:processDebugManifest``` error.
 - Fixed sdk errors.
+
+# 1.8.1
+- Fixed ```doesn't have a main class``` error.
