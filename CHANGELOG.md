@@ -25,3 +25,7 @@
 # 1.7.0
 - Fixed ```Namespace not specified``` error.
 - Fixed sdk errors.
+
+# 1.8.0
+- Fixed ```:simple_animation_progress_bar:processDebugManifest``` error.
+- Fixed sdk errors.

@@ -7,7 +7,7 @@ project(runner LANGUAGES CXX)
 set(BINARY_NAME "simple_animation_progress_bar_example")
 # The unique GTK application identifier for this application. See:
 # https://wiki.gnome.org/HowDoI/ChooseApplicationID
-set(APPLICATION_ID "com.example.simple_aniatiom_progress_bar.simple_animation_progress_bar")
+set(APPLICATION_ID "com.canarslandev.simple_animation_progress_bar")
 
 # Explicitly opt in to modern CMake behaviors to avoid warnings with recent
 # versions of CMake.

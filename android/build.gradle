@@ -1,4 +1,4 @@
-group 'com.example.simple_aniatiom_progress_bar.simple_animation_progress_bar'
+group 'com.canarslandev.simple_animation_progress_bar'
 version '1.0-SNAPSHOT'
 
 buildscript {

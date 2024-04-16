@@ -25,7 +25,7 @@ This Flutter widget pack aims to show a reactive style animation progress bar. I
 You should ensure that you add the router as a dependency in your flutter project.
 ```yaml
 dependencies:
- simple_animation_progress_bar: "^1.7.0"
+ simple_animation_progress_bar: "^1.8.0"
 ```
 y
 You should then run `flutter packages upgrade` or update your packages in IntelliJ.

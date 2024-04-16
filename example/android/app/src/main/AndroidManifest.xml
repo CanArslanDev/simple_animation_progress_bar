@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.simple_aniatiom_progress_bar.simple_animation_progress_bar_example">
+    package="com.canarslandev.simple_animation_progress_bar_example">
    <application
         android:label="simple_animation_progress_bar_example"
         android:name="${applicationName}"
