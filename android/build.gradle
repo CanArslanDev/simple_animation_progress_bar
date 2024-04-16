@@ -1,4 +1,4 @@
-group 'com.canarslandev.simple_animation_progress_bar'
+group 'com.example.simple_aniatiom_progress_bar.simple_animation_progress_bar'
 version '1.0-SNAPSHOT'
 
 buildscript {
@@ -25,7 +25,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    namespace 'com.canarslandev.simple_animation_progress_bar'
+    namespace 'com.example.simple_aniatiom_progress_bar.simple_animation_progress_bar'
     compileSdkVersion 31
 
     compileOptions {

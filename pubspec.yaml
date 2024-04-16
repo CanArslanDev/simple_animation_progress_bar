@@ -21,7 +21,6 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
-flutter:
   # This section identifies this Flutter project as a plugin project.
   # The 'pluginClass' specifies the class (in Java, Kotlin, Swift, Objective-C, etc.)
   # which should be registered in the plugin registry. This is required for
@@ -36,9 +35,8 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.canarslandev.simple_animation_progress_bar
+        package: com.example.simple_aniatiom_progress_bar.simple_animation_progress_bar
         pluginClass: SimpleAnimationProgressBarPlugin
-        androidPackage: com.canarslandev.simple_animation_progress_bar
       ios:
         pluginClass: SimpleAnimationProgressBarPlugin
       linux:

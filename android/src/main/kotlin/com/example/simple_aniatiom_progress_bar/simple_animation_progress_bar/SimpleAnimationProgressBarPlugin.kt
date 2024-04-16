@@ -1,4 +1,4 @@
-package com.canarslandev.simple_animation_progress_bar
+package com.example.simple_aniatiom_progress_bar.simple_animation_progress_bar
 
 import androidx.annotation.NonNull
 
