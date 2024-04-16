@@ -32,12 +32,13 @@ flutter:
   # This is required for using `dart:ffi`.
   # All these are used by the tooling to maintain consistency when
   # adding or updating assets for this project.
+flutter:
   plugin:
     platforms:
-    mainClass: SimpleAnimationProgressBarPlugin
       android:
         package: com.canarslandev.simple_animation_progress_bar
         pluginClass: SimpleAnimationProgressBarPlugin
+        androidPackage: com.canarslandev.simple_animation_progress_bar
       ios:
         pluginClass: SimpleAnimationProgressBarPlugin
       linux:
@@ -46,6 +47,7 @@ flutter:
         pluginClass: SimpleAnimationProgressBarPlugin
       windows:
         pluginClass: SimpleAnimationProgressBarPluginCApi
+
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
