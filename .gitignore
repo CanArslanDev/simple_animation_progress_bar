@@ -22,9 +22,46 @@ migrate_working_dir/
 #.vscode/
 
 # Flutter/Dart/Pub related
-# Libraries should not include pubspec.lock, per https://dart.dev/guides/libraries/private-files#pubspeclock.
-/pubspec.lock
+**/ios/Runner/GoogleService-Info.plist
+**/android/app/google-service.json
 **/doc/api/
+**/ios/Flutter/.last_build_id
 .dart_tool/
+.vscode/
+.flutter-plugins
+.flutter-plugins-dependencies
 .packages
-build/
+.pubspec.lock
+.pub-cache/
+.pub/
+/build/
+pubspec.lock
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Flutter platforms
+/macos/
+/windows/
+/web/
+/linux/
+
+# Android Gradle related
+/android/.gradle/
+/android/app/.cxx/
+/android/local.properties
+
+# iOS CocoaPods related
+/ios/Pods/
+/ios/.symlinks/
+/ios/.flutter-plugins/
+/ios/.flutter-plugins-dependencies/
+/ios/Podfile.lock
