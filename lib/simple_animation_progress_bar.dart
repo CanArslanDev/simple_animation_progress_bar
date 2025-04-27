@@ -24,7 +24,9 @@ class SimpleAnimationProgressBar extends StatefulWidget {
       this.reverseAlignment,
       this.waitDelay,
       this.gradientColor,
-      this.boxShadow});
+      this.boxShadow,
+      this.progressBarShadow,
+      this.backgroundShadow});
   final double ratio; //Sets the progress bar value
   final double width; //Sets progress bar width
   final double height; //Sets progress bar height
@@ -40,7 +42,11 @@ class SimpleAnimationProgressBar extends StatefulWidget {
       reverseAlignment; //Reverses the bar alignment, such as left-to-right or right-to-left
   final Duration? waitDelay; //Sets you to delay the start of animation
   final Gradient? gradientColor; //Sets gardient color in progress bar
+  @Deprecated(
+      "boxShadow will be removed soon, please use progressBarShadow or backgroundShadow instead")
   final List<BoxShadow>? boxShadow; //Sets shadow in progress bar
+  final List<BoxShadow>? progressBarShadow; //Sets shadow in progress bar
+  final List<BoxShadow>? backgroundShadow; //Sets shadow in progress bar
   @override
   State<SimpleAnimationProgressBar> createState() =>
       _SimpleAnimationProgressBarState();
@@ -95,23 +101,33 @@ class _SimpleAnimationProgressBarState
         valueListenable: ratio,
         builder: (BuildContext context, double ratioValue, Widget? child) {
           return Container(
-              //The container here creates the background of the progress bar, then returns the widget to be created with the direction variable.
-              height: widget.height,
-              width: widget.width,
-              decoration: BoxDecoration(
-                color: widget.backgroundColor,
-                border: widget.border,
-                borderRadius: widget.borderRadius,
-              ),
-              child: (widget.direction == Axis.horizontal)
-                  ? _HorizontalBar(
-                      widget: widget,
-                      ratio: ratio.value,
-                    )
-                  : _VerticalBar(
-                      widget: widget,
-                      ratio: ratio.value,
-                    ));
+            decoration: BoxDecoration(
+              boxShadow: (widget.backgroundShadow != null)
+                  ? widget.backgroundShadow
+                  : null,
+            ),
+            child: ClipRRect(
+              borderRadius: widget.borderRadius ?? BorderRadius.circular(0),
+              child: Container(
+                  //The container here creates the background of the progress bar, then returns the widget to be created with the direction variable.
+                  height: widget.height,
+                  width: widget.width,
+                  decoration: BoxDecoration(
+                    color: widget.backgroundColor,
+                    border: widget.border,
+                    borderRadius: widget.borderRadius,
+                  ),
+                  child: (widget.direction == Axis.horizontal)
+                      ? _HorizontalBar(
+                          widget: widget,
+                          ratio: ratio.value,
+                        )
+                      : _VerticalBar(
+                          widget: widget,
+                          ratio: ratio.value,
+                        )),
+            ),
+          );
         });
   }
 }
@@ -145,7 +161,11 @@ class _VerticalBar extends StatelessWidget {
               (widget.gradientColor != null) ? widget.gradientColor : null,
           color: (widget.gradientColor != null) ? null : widget.foregrondColor,
           borderRadius: widget.borderRadius,
-          boxShadow: (widget.boxShadow != null) ? widget.boxShadow : null,
+          boxShadow: (widget.progressBarShadow != null)
+              ? widget.progressBarShadow
+              : (widget.boxShadow != null)
+                  ? widget.boxShadow
+                  : null,
         ),
       ),
     );
@@ -181,7 +201,11 @@ class _HorizontalBar extends StatelessWidget {
               (widget.gradientColor != null) ? widget.gradientColor : null,
           color: (widget.gradientColor != null) ? null : widget.foregrondColor,
           borderRadius: widget.borderRadius,
-          boxShadow: (widget.boxShadow != null) ? widget.boxShadow : null,
+          boxShadow: (widget.progressBarShadow != null)
+              ? widget.progressBarShadow
+              : (widget.boxShadow != null)
+                  ? widget.boxShadow
+                  : null,
         ),
       ),
     );

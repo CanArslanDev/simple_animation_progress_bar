@@ -10,21 +10,11 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
         primarySwatch: Colors.blue,
       ),
       home: const SimpleAnimationProgressBarTestPage(),
@@ -96,29 +86,35 @@ class _SimpleAnimationProgressBarTestPageState
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: SimpleAnimationProgressBar(
-                    height: 30,
-                    width: 300,
-                    backgroundColor: Colors.grey.shade800,
-                    foregrondColor: Colors.purple,
-                    ratio: ratio,
-                    direction: Axis.horizontal,
-                    curve: Curves.fastLinearToSlowEaseIn,
-                    duration: const Duration(seconds: 3),
-                    borderRadius: BorderRadius.circular(10),
-                    gradientColor: const LinearGradient(
-                        colors: [Colors.pink, Colors.purple]),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors.pink,
-                        offset: Offset(
-                          5.0,
-                          5.0,
+                      height: 30,
+                      width: 300,
+                      backgroundColor: Colors.grey.shade800,
+                      foregrondColor: Colors.purple,
+                      ratio: ratio,
+                      direction: Axis.horizontal,
+                      curve: Curves.fastLinearToSlowEaseIn,
+                      duration: const Duration(seconds: 3),
+                      borderRadius: BorderRadius.circular(10),
+                      gradientColor: const LinearGradient(
+                          colors: [Colors.pink, Colors.purple]),
+                      progressBarShadow: const [
+                        BoxShadow(
+                          color: Colors.pink,
+                          offset: Offset(
+                            5.0,
+                            5.0,
+                          ),
+                          blurRadius: 10.0,
+                          spreadRadius: 2.0,
                         ),
-                        blurRadius: 10.0,
-                        spreadRadius: 2.0,
-                      ),
-                    ],
-                  ),
+                      ],
+                      backgroundShadow: [
+                        BoxShadow(
+                          color: Colors.blue.withValues(alpha: 0.3),
+                          blurRadius: 5,
+                          spreadRadius: 0.4,
+                        ),
+                      ]),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -132,7 +128,7 @@ class _SimpleAnimationProgressBarTestPageState
                     curve: Curves.fastLinearToSlowEaseIn,
                     duration: const Duration(seconds: 3),
                     borderRadius: BorderRadius.circular(10),
-                    boxShadow: const [
+                    progressBarShadow: const [
                       BoxShadow(
                         color: Colors.pink,
                         offset: Offset(
@@ -158,7 +154,7 @@ class _SimpleAnimationProgressBarTestPageState
                     duration: const Duration(seconds: 3),
                     borderRadius: BorderRadius.circular(10),
                     reverseAlignment: true,
-                    boxShadow: const [
+                    progressBarShadow: const [
                       BoxShadow(
                         color: Colors.pink,
                         offset: Offset(
