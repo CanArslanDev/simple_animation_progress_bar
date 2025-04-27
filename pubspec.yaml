@@ -1,6 +1,6 @@
 name: simple_animation_progress_bar
 description: This Flutter widget pack aims to show a reactive style animation progress bar. It also supports both vertical and horizontal bar.
-version: 1.9.0
+version: 1.9.1
 homepage: https://github.com/CanArslanDev/simple_animation_progress_bar
 
 environment:

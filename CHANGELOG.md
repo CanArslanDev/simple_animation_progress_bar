@@ -1,7 +1,10 @@
+# 1.9.1
+- Updated Changelog and Readme.
+
 # 1.9.0
-- Added ClipRRect to improve border radius rendering
-- Added separate shadow options for background and progress bar
-- Deprecated boxShadow in favor of progressBarShadow and backgroundShadow
+- Added ClipRRect to improve border radius rendering.
+- Added separate shadow options for background and progress bar.
+- Deprecated boxShadow in favor of progressBarShadow and backgroundShadow.
 
 # 1.8.1
 - Fixed ```doesn't have a main class``` error.
@@ -21,8 +24,8 @@
 - Some bugs fixed.
 
 # 1.4.0
-- Fixed Support Platforms
-- Fixed settings.gradle error
+- Fixed Support Platforms.
+- Fixed settings.gradle error.
 
 # 1.3.0
 - Fixed code errors and some optimization issues.
