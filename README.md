@@ -18,16 +18,17 @@ This Flutter widget pack aims to show a reactive style animation progress bar. I
 - Set delay value
 - Set direction
 - Set reverse bar
-- Set box shadow
+- Set separate shadows for background and progress bar
+- Improved border radius rendering with ClipRRect
 
 ## Getting started
 
 You should ensure that you add the router as a dependency in your flutter project.
 ```yaml
 dependencies:
- simple_animation_progress_bar: "^1.8.1"
+ simple_animation_progress_bar: "^1.9.0"
 ```
-y
+
 You should then run `flutter packages upgrade` or update your packages in IntelliJ.
 
 ## Example Project
@@ -54,7 +55,7 @@ SimpleAnimationProgressBar(
     curve: Curves.fastLinearToSlowEaseIn,
     duration: const Duration(seconds: 3),
     borderRadius: BorderRadius.circular(10),
-    boxShadow: [
+    progressBarShadow: [
       BoxShadow(
         color: Colors.pink,
         offset: const Offset(
@@ -64,7 +65,7 @@ SimpleAnimationProgressBar(
         blurRadius: 10.0,
         spreadRadius: 2.0,
       ),
-      ],
+    ],
 )
 ```
 
@@ -83,7 +84,7 @@ SimpleAnimationProgressBar(
     borderRadius: BorderRadius.circular(10),
     gradientColor: const LinearGradient(
     colors: [Colors.pink, Colors.purple]),
-    boxShadow: [
+    progressBarShadow: [
       BoxShadow(
         color: Colors.pink,
         offset: const Offset(
@@ -93,6 +94,17 @@ SimpleAnimationProgressBar(
         blurRadius: 10.0,
         spreadRadius: 2.0,
       ),
-      ],
+    ],
+    backgroundShadow: [
+      BoxShadow(
+        color: Colors.black45,
+        offset: const Offset(
+          2.0,
+          2.0,
+        ),
+        blurRadius: 5.0,
+        spreadRadius: 1.0,
+      ),
+    ],
 )
 ```
