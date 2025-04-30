@@ -1,3 +1,6 @@
+# 1.9.2
+- Changed foreground variable name.
+
 # 1.9.1
 - Updated Changelog and Readme.
 
