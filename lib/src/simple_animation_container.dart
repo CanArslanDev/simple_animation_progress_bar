@@ -18,7 +18,7 @@ class SimpleAnimationProgressBar extends StatefulWidget {
       this.borderRadius,
       this.border,
       required this.backgroundColor,
-      required this.foregrondColor,
+      required this.foregroundColor,
       required this.duration,
       required this.curve,
       this.reverseAlignment,
@@ -33,7 +33,7 @@ class SimpleAnimationProgressBar extends StatefulWidget {
   final BorderRadius? borderRadius; //Gives border radius for progress bar
   final Border? border; //Gives border radius for progress bar
   final Color backgroundColor; //Sets the background of the progress bar
-  final Color foregrondColor; //Sets the foreground of the progress bar
+  final Color foregroundColor; //Sets the foreground of the progress bar
   final Duration duration; //Sets the animation speed in the progress bar
   final Curve curve; //Sets the animation type
   final bool?
@@ -143,7 +143,7 @@ class _VerticalBar extends StatelessWidget {
         decoration: BoxDecoration(
           gradient:
               (widget.gradientColor != null) ? widget.gradientColor : null,
-          color: (widget.gradientColor != null) ? null : widget.foregrondColor,
+          color: (widget.gradientColor != null) ? null : widget.foregroundColor,
           borderRadius: widget.borderRadius,
           boxShadow: (widget.boxShadow != null) ? widget.boxShadow : null,
         ),
@@ -179,7 +179,7 @@ class _HorizontalBar extends StatelessWidget {
         decoration: BoxDecoration(
           gradient:
               (widget.gradientColor != null) ? widget.gradientColor : null,
-          color: (widget.gradientColor != null) ? null : widget.foregrondColor,
+          color: (widget.gradientColor != null) ? null : widget.foregroundColor,
           borderRadius: widget.borderRadius,
           boxShadow: (widget.boxShadow != null) ? widget.boxShadow : null,
         ),
